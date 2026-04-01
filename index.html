@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#f5f5f5" />
+  <title>Time Perception Study</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- SCREEN 1: Welcome -->
+  <div id="screen-welcome" class="screen active">
+    <div class="card">
+      <h1>Time Perception Study</h1>
+      <p class="subtitle">AP Statistics Project</p>
+      <div class="instructions">
+        <ol>
+          <li>Make sure your volume is on.</li>
+          <li>Click <strong>Begin</strong> — music will start playing.</li>
+          <li>Close your eyes and count internally to 30 seconds.</li>
+          <li>When you think 30 seconds has passed, click <strong>Stop</strong>.</li>
+          <li>Do <strong>not</strong> count out loud or look at a clock.</li>
+        </ol>
+      </div>
+      <button id="btn-begin" class="btn btn-primary">Begin</button>
+    </div>
+  </div>
+
+  <!-- SCREEN 2: Timer (active test) -->
+  <div id="screen-timer" class="screen">
+    <div class="card">
+      <p class="timer-hint">Music is playing.<br>Stop when you think 30 seconds has passed.</p>
+      <button id="btn-stop" class="btn btn-primary">Stop</button>
+    </div>
+  </div>
+
+  <!-- SCREEN 3: Result -->
+  <div id="screen-result" class="screen">
+    <div class="card">
+      <p class="result-label">Your time</p>
+      <div class="result-time" id="result-time"></div>
+      <div class="result-verdict" id="result-verdict"></div>
+      <button id="btn-another" class="btn btn-primary">Next Participant</button>
+    </div>
+  </div>
+
+  <audio id="audio-slow" loop preload="auto">
+    <source src="music/slow.mp3" type="audio/mpeg" />
+  </audio>
+  <audio id="audio-fast" loop preload="auto">
+    <source src="music/fast.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
