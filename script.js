@@ -96,6 +96,9 @@ document.getElementById('btn-stop').addEventListener('click', () => {
   verdictEl.textContent = verdict + '  (' + diffStr + ')';
   verdictEl.className = 'result-verdict ' + (verdict === 'Underestimate' ? 'under' : 'over');
 
+  const musicEl = document.getElementById('result-music');
+  musicEl.textContent = 'Song type: ' + (currentMusic === 'slow' ? 'Slow' : 'Fast');
+
   showScreen('result');
 });
 

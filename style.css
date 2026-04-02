@@ -96,6 +96,12 @@ h1 {
 }
 .result-verdict.under { color: #d97706; }
 .result-verdict.over  { color: #2563eb; }
+.result-music {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
 
 /* ── Button ── */
 .btn {
